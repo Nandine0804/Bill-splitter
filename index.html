@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advanced tip Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Anton&family=Architects+Daughter&family=Asap+Condensed&family=Caveat:wght@400;500&family=Cinzel:wght@500&family=Cormorant+Garamond:wght@600&family=EB+Garamond&family=Josefin+Sans:wght@200&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@300&family=Oswald:wght@200&family=Overpass:wght@200&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&family=Roboto:wght@100&family=Space+Grotesk&family=Water+Brush&family=Yanone+Kaffeesatz:wght@300&family=Zen+Antique&family=Zen+Kurenaido&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Overpass', sans-serif;
+        }
+        
+        body {
+            background: #12c2e9;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .con_inside {
+            margin: 200px 40rem;
+            width: 30rem;
+            height: 25rem;
+            border-radius: 30px;
+            background: #0f0c29;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        h3 {
+            color: white;
+        }
+        
+        .form {
+            padding: 50px;
+            margin: auto 0px;
+        }
+        
+        .bill_div {
+            position: relative;
+        }
+        
+        .bill_div h3 {
+            color: white;
+            font-size: 1.3rem;
+        }
+        
+        input {
+            width: 400px;
+            height: 40px;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: black;
+            text-align: center;
+            font-weight: bolder;
+        }
+        
+        .bill_dollar h4 {
+            margin: -32px 370px;
+            font-size: 1.3em;
+        }
+        
+        .tip_div {
+            margin: 45px auto;
+        }
+        
+        .tip_div h4 {
+            margin: -32px 370px;
+            font-size: 1.3em;
+        }
+        
+        .people {
+            margin: -200px 50px;
+        }
+        
+        .people h4 {
+            color: white;
+            margin: 160px -10px;
+            position: absolute;
+            font-size: 1.1rem;
+        }
+        
+        .people button {
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
+            font-weight: bolder;
+            border: none;
+            border-radius: 50%;
+            margin: 200px auto;
+            cursor: pointer;
+        }
+        
+        .people #demoInput {
+            width: 40px;
+            height: 40px;
+            font-size: 1.4rem;
+            text-align: center;
+            border: none;
+            text-align: center;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+        
+        .Total_per_person {
+            margin: -280px 385px;
+        }
+        
+        .Total_per_person h4 {
+            color: white;
+            white-space: nowrap;
+            margin: 10px -50px;
+        }
+        
+        .Total_per_person h3 {
+            color: white;
+            margin: -30px -16px;
+            font-size: 1.8rem;
+        }
+        
+        @media screen and (max-width:1000px) {
+            body {
+                background-size: cover;
+                background: #12c2e9;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+            }
+        }
+        
+        .con_inside {
+            margin: 200px 20rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="con_inside">
+            <form class="form" id="form">
+                <div class="bill_div">
+                    <h3>Bill total</h3>
+                    <div class="bill_dollar">
+                        <input type="number" class="bill" id="bill" onkeyup="keyup()"><br />
+                        <h4>$</h4>
+                    </div>
+                </div>
+                <div class=" tip_div ">
+                    <h3>Tips</h3>
+                    <input type="number" class="tip " id="tip" onkeyup="keyup()"><br />
+                    <h4>+</h4>
+                </div>
+            </form>
+            <div class=" people ">
+                <h4>People</h4>
+                <button id="add">+</button>
+                <input id=demoInput type=number value="1" readonly>
+                <button id="sub">-</button>
+            </div>
+
+            <div class=" Total_per_person ">
+                <h4>Total $ per person</h4>
+                <h4> $</h4>
+                <h3 class=" final_amout " id=" total ">
+                    <span id="demo" value="0" onkeyup="bill()"> 0</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+    <script src=" dom.js ">
+    </script>
+</body>
+
+</html>
