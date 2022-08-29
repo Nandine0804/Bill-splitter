@@ -12,7 +12,7 @@ function keyup() {
   r = Number(x) + Number(y);
   document.getElementById("demo").innerHTML = r;
   z = Number(r / t);
-  document.getElementById("demo").innerHTML = Number(z);
+  document.getElementById("demo").innerHTML = Math.round(z);
 }
 
 add.addEventListener("click", () => {
